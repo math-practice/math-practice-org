@@ -1,0 +1,47 @@
+body {
+  background-color: #000;
+  color:#fff;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 28px;
+  letter-spacing: 0.02em;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.2em;
+  margin: 20px 30px;
+}
+body.is_mobile {
+  margin: 10px 20px;
+}
+a {
+  color: #fff;
+}
+a:hover {
+  text-decoration: none;
+}
+.wrapper { 
+  /*display: none;*/
+  margin: 0 auto 2em auto;
+  /*word-break: break-all;*/
+}
+
+ul, li {
+  display: inline-block;
+  list-style-type: none;
+  padding:0;
+  margin:0;
+}
+
+li:not(:last-child):after{
+  content:", ";
+}
+
+li a {
+  text-decoration: none;
+}
+
+li a:hover {
+ text-decoration: underline; 
+}
+
+.indent {
+  padding-left:2em;
+}
