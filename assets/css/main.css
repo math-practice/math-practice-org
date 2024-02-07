@@ -221,9 +221,14 @@ footer {
 .is-scrollable-container {
   min-height: 640px;
   height: 100dvh;
-  overflow: auto;
   scroll-snap-type: y mandatory;
-/*  scroll-behavior: smooth;*/
+  scroll-behavior: smooth;
+  /* 
+    fix flickering 
+    https://stackoverflow.com/questions/47183749/ios-safari-flicker-when-scrolling 
+  */
+  overflow-x: hidden;
+  overflow-y: scroll; 
 }
 .is-scrollable-item {
   min-height: 600px;
