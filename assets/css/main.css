@@ -6,6 +6,7 @@
 /* 120rem = 1800 = XL */
 
 :root {
+
 }
 
 /* defaults */
@@ -42,15 +43,15 @@ a.noline:hover  { border-bottom: 1px solid;  }
 
 span.nobr { display:inline-block; }
 
-em {
-  font-style: italic;
-}
+em { font-style: italic; }
 
-/* type utils */
+/* utils: type */
+
 .t-mono {
   font-family: "CMU Typewriter", monospace;
   font-weight: 400;
 }
+
 .t-sans {
   font-family: "Unica77", sans-serif;
   font-weight: 600;
@@ -92,36 +93,47 @@ em {
   padding-left: 0.5em;
 }
 
-/* spacing utils */
+/* utils: spacing */
 
 .m-1 { margin: 1rem; }
+
 .mt-1 { margin-top: 1rem; }
 .mt-2 { margin-top: 2rem; }
 .mt-3 { margin-top: 3rem; }
+
 .p-1 { padding: 1rem; }
+
 .pt-1 { padding-top: 1rem; }
 .pt-2 { padding-top: 2rem; }
 .pt-3 { padding-top: 3rem; }
 .pb-1 { padding-bottom: 1rem; }
 .pb-2 { padding-bottom: 2rem; }
 .pb-3 { padding-bottom: 3rem; }
+
 .pl-1 { padding-left: 1rem; }
 
-/* elements */
-h1.title { 
+
+/* utils: layout */
+
+.l-fixed {
   position: fixed;
   z-index: 9999; 
+}
+.l-absolute {
+  position: absolute;
+}
+.l-bottom { bottom: 0 }
+
+
+/* cosmetic */
+
+.c-shadow {
   text-shadow: 0 0 4px #000;
 }
-span.arrow {
-  position: absolute;
-  bottom: 0px;
-}
-article {
-  position: relative;
-}
 
-article.info { 
+/* element specifics */
+
+#info { 
   width: 400px;
   z-index: 1000; 
   padding-top: 2rem;
@@ -130,7 +142,7 @@ article.info {
 }
 
 @media only screen and (max-width: 48rem) { 
-  article.info {
+  #info {
     width: 100%; 
     position: static;
     height: auto;
@@ -148,13 +160,22 @@ ul.names li:not(:last-child)::after {
   content: ",";
 }
 
+article {
+  position: relative;
+}
+
 figure {
   height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-@media only screen and (max-width: 48rem) { figure { background-color: #000; } }
+
+@media only screen and (max-width: 48rem) { 
+  figure { 
+    background-color: #000; 
+  } 
+}
 
 figure img,
 figure iframe {
@@ -163,6 +184,7 @@ figure iframe {
   position: absolute;
   z-index: 2000;
 }
+
 figcaption {
   padding: 1rem;
   position: absolute;
@@ -172,6 +194,7 @@ figcaption {
   z-index: 8000;
   text-shadow: 0 0 4px #000;
 }
+
 @media only screen and (max-width: 48rem) { 
   figcaption { 
     top:auto; 
@@ -199,6 +222,8 @@ footer {
   .below-s { display: inline-block; }
   .fin { width: 100%; }
 }
+
+
 /* interactive */
 
 .is-scrollable-container {
@@ -206,7 +231,7 @@ footer {
   height: 100vh;
   overflow: auto;
   scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
+/*  scroll-behavior: smooth;*/
 }
 .is-scrollable-item {
   min-height: 600px;
