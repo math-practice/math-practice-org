@@ -71,13 +71,13 @@ em { font-style: italic; }
   line-height: 1.2;
 }
 
-.t-md p,
+/*.t-md p,
 .t-md h1,
 .t-md ul, 
 .t-md ol,
 .t-md ol > li:not(:last-child) {
   margin-bottom: 1rem;
-}
+}*/
 
 .t-md ol {
   list-style-type: decimal;
@@ -91,6 +91,10 @@ em { font-style: italic; }
 .t-md ol ul {
   list-style-type: "— ";
   padding-left: 0.5em;
+}
+
+.t-shadow {
+  text-shadow: 0 0 4px #000;
 }
 
 /* utils: spacing */
@@ -123,13 +127,6 @@ em { font-style: italic; }
   position: absolute;
 }
 .l-bottom { bottom: 0 }
-
-
-/* cosmetic */
-
-.c-shadow {
-  text-shadow: 0 0 4px #000;
-}
 
 /* element specifics */
 
@@ -232,13 +229,15 @@ footer {
   scroll-snap-align: start;
 }*/
 
-.scroller {
+.i-scroller {
+  min-height: 640px;
   height: 100dvh;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
-.scroller section {
-  scroll-snap-align: start;
+.i-scroller section {
+  min-height: 640px;
   height: 100dvh;
+  scroll-snap-align: start;
 }
