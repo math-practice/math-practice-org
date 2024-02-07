@@ -160,7 +160,7 @@ ul.names li:not(:last-child)::after {
   content: ",";
 }
 
-article {
+article section {
   position: relative;
 }
 
@@ -218,7 +218,7 @@ footer {
 
 /* interactive */
 
-.is-scrollable-container {
+/*.is-scrollable-container {
   min-height: 640px;
   height: 100dvh;
   overflow-y: scroll;
@@ -230,4 +230,14 @@ footer {
   min-height: 600px;
   height: 100vh;
   scroll-snap-align: start;
+}*/
+
+.scroller {
+  height: 100dvh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.scroller section {
+  scroll-snap-align: start;
+  height: 100dvh;
 }
