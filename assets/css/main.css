@@ -214,24 +214,16 @@ footer {
     margin-left: 0;
   }
 }
-.below-s {
-  display: none;
-}
-@media only screen and (max-width: 48rem) { 
-  .above-s { display: none; }
-  .below-s { display: inline-block; }
-  .fin { width: 100%; }
-}
 
 
 /* interactive */
 
 .is-scrollable-container {
   min-height: 640px;
-  height: 100vh;
+  height: 100dvh;
   overflow: auto;
   scroll-snap-type: y mandatory;
-/*  scroll-behavior: smooth;*/
+  scroll-behavior: smooth;
 }
 .is-scrollable-item {
   min-height: 600px;
