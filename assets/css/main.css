@@ -221,7 +221,7 @@ footer {
 .is-scrollable-container {
   min-height: 640px;
   height: 100dvh;
-  overflow: auto;
+  overflow-y: scroll;
   backface-visibility: hidden;
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
