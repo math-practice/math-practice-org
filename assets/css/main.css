@@ -217,16 +217,23 @@ figcaption {
 
 #rotate-bar:after {
   content: "—"; 
-  animation: changeLetter 1s linear infinite alternate;
+  animation: changeLetter 5s linear infinite;
   display: inline-block;
-  width: 1em;
+  width: 0.5em;
   text-align: center;
+  font-variant-numeric: tabular-nums;
 }
 @keyframes changeLetter {
-  0%  { content: "—"; }
-  25% { content: "/"; }
-  50% { content: "|"; }
-  75% { content: "\\"; }
+  0%   { content: "9"; }
+  10%  { content: "8"; }
+  20%  { content: "7"; }
+  30%  { content: "6"; }
+  40%  { content: "5"; }
+  50%  { content: "4"; }
+  60%  { content: "3"; }
+  70%  { content: "2"; }
+  80%  { content: "1"; }
+  90%  { content: "—"; }
 }
 
 /* interactive */
